@@ -2,6 +2,9 @@ import { createStore } from 'redux';
 
 import reducer from './modules/rootReducer';
 
-const store = createStore(reducer);
+const enhancer =
+  process.env.NODE_ENV === 'development' ? console.tron.createEnhancer() : null;
+
+const store = createStore(reducer, enhancer);
 
 export default store;
