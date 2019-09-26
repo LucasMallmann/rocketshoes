@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import 'react-toastify/dist/ReactToastify.css';
+
 import background from '../assets/images/background.svg';
 
 export default createGlobalStyle`
@@ -11,6 +13,8 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
   }
+
+  .Toastify__toast-body { font-family: Roboto; }
 
   body {
     background: #191920 url(${background}) no-repeat center top;
